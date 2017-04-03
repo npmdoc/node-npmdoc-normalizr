@@ -1,21 +1,21 @@
 <svg height="286" width="720" xmlns="http://www.w3.org/2000/svg">
 <rect height="286" fill="#555" width="720"></rect>
 <text fill="#7f7" font-family="Courier New" font-size="12" xml:space="preserve">
-<tspan x="10" y="26">  0.  2017-04-03 17:38:54 +0000    69170 byte  .</tspan>
-<tspan x="10" y="42">  1.  2017-04-03 17:38:54 +0000     1659 byte  CHANGELOG.md</tspan>
-<tspan x="10" y="58">  2.  2017-04-03 17:38:54 +0000     1094 byte  LICENSE</tspan>
-<tspan x="10" y="74">  3.  2017-04-03 17:38:54 +0000     3286 byte  README.md</tspan>
-<tspan x="10" y="90">  4.  2017-04-03 17:38:54 +0000    19755 byte  dist/normalizr.js</tspan>
-<tspan x="10" y="106">  5.  2017-04-03 17:38:54 +0000     9597 byte  dist/normalizr.min.js</tspan>
-<tspan x="10" y="122">  6.  2017-04-03 17:38:54 +0000     5527 byte  dist/src/index.js</tspan>
-<tspan x="10" y="138">  7.  2017-04-03 17:38:54 +0000     3988 byte  dist/src/schemas/Array.js</tspan>
-<tspan x="10" y="154">  8.  2017-04-03 17:38:54 +0000     5324 byte  dist/src/schemas/Entity.js</tspan>
-<tspan x="10" y="170">  9.  2017-04-03 17:38:54 +0000     1321 byte  dist/src/schemas/ImmutableUtils.js</tspan>
-<tspan x="10" y="186"> 10.  2017-04-03 17:38:54 +0000     3695 byte  dist/src/schemas/Object.js</tspan>
-<tspan x="10" y="202"> 11.  2017-04-03 17:38:54 +0000     2721 byte  dist/src/schemas/Polymorphic.js</tspan>
-<tspan x="10" y="218"> 12.  2017-04-03 17:38:54 +0000     2634 byte  dist/src/schemas/Union.js</tspan>
-<tspan x="10" y="234"> 13.  2017-04-03 17:38:54 +0000     3390 byte  dist/src/schemas/Values.js</tspan>
-<tspan x="10" y="250"> 14.  2017-04-03 17:38:54 +0000     1541 byte  index.d.ts</tspan>
-<tspan x="10" y="266"> 15.  2017-04-03 17:38:54 +0000     3638 byte  package.json</tspan>
+<tspan x="10" y="26">  0.  2017-04-03 17:40:10 +0000    69170 byte  .</tspan>
+<tspan x="10" y="42">  1.  2017-04-03 17:40:10 +0000     1659 byte  CHANGELOG.md</tspan>
+<tspan x="10" y="58">  2.  2017-04-03 17:40:10 +0000     1094 byte  LICENSE</tspan>
+<tspan x="10" y="74">  3.  2017-04-03 17:40:10 +0000     3286 byte  README.md</tspan>
+<tspan x="10" y="90">  4.  2017-04-03 17:40:10 +0000    19755 byte  dist/normalizr.js</tspan>
+<tspan x="10" y="106">  5.  2017-04-03 17:40:10 +0000     9597 byte  dist/normalizr.min.js</tspan>
+<tspan x="10" y="122">  6.  2017-04-03 17:40:10 +0000     5527 byte  dist/src/index.js</tspan>
+<tspan x="10" y="138">  7.  2017-04-03 17:40:10 +0000     3988 byte  dist/src/schemas/Array.js</tspan>
+<tspan x="10" y="154">  8.  2017-04-03 17:40:10 +0000     5324 byte  dist/src/schemas/Entity.js</tspan>
+<tspan x="10" y="170">  9.  2017-04-03 17:40:10 +0000     1321 byte  dist/src/schemas/ImmutableUtils.js</tspan>
+<tspan x="10" y="186"> 10.  2017-04-03 17:40:10 +0000     3695 byte  dist/src/schemas/Object.js</tspan>
+<tspan x="10" y="202"> 11.  2017-04-03 17:40:10 +0000     2721 byte  dist/src/schemas/Polymorphic.js</tspan>
+<tspan x="10" y="218"> 12.  2017-04-03 17:40:10 +0000     2634 byte  dist/src/schemas/Union.js</tspan>
+<tspan x="10" y="234"> 13.  2017-04-03 17:40:10 +0000     3390 byte  dist/src/schemas/Values.js</tspan>
+<tspan x="10" y="250"> 14.  2017-04-03 17:40:10 +0000     1541 byte  index.d.ts</tspan>
+<tspan x="10" y="266"> 15.  2017-04-03 17:40:10 +0000     3638 byte  package.json</tspan>
 </text>
 </svg>
