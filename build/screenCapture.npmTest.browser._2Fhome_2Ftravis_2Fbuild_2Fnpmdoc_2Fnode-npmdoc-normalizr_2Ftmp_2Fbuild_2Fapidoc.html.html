@@ -1,0 +1,325 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/paularmstrong/normalizr">normalizr (v3.2.2)</a>
+</h1>
+<h4>Normalizes and denormalizes JSON according to schema for Redux and Flux applications</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.normalizr">module normalizr</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.normalizr.denormalize">
+            function <span class="apidocSignatureSpan">normalizr.</span>denormalize
+            <span class="apidocSignatureSpan">(input, schema, entities)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.normalizr.normalize">
+            function <span class="apidocSignatureSpan">normalizr.</span>normalize
+            <span class="apidocSignatureSpan">(input, schema)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">normalizr.</span>schema</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.normalizr.schema">module normalizr.schema</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.normalizr.schema.Array">
+            function <span class="apidocSignatureSpan">normalizr.schema.</span>Array
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.normalizr.schema.Entity">
+            function <span class="apidocSignatureSpan">normalizr.schema.</span>Entity
+            <span class="apidocSignatureSpan">(key)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.normalizr.schema.Object">
+            function <span class="apidocSignatureSpan">normalizr.schema.</span>Object
+            <span class="apidocSignatureSpan">(definition)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.normalizr.schema.Union">
+            function <span class="apidocSignatureSpan">normalizr.schema.</span>Union
+            <span class="apidocSignatureSpan">(definition, schemaAttribute)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.normalizr.schema.Values">
+            function <span class="apidocSignatureSpan">normalizr.schema.</span>Values
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.normalizr" id="apidoc.module.normalizr">module normalizr</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.normalizr.denormalize" id="apidoc.element.normalizr.denormalize">
+        function <span class="apidocSignatureSpan">normalizr.</span>denormalize
+        <span class="apidocSignatureSpan">(input, schema, entities)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function denormalize(input, schema, entities) {
+  if (!input) {
+    return input;
+  }
+
+  return getUnvisit(entities)(input, schema);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.normalizr.normalize" id="apidoc.element.normalizr.normalize">
+        function <span class="apidocSignatureSpan">normalizr.</span>normalize
+        <span class="apidocSignatureSpan">(input, schema)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function normalize(input, schema) {
+  if (!input || (typeof input === 'undefined' ? 'undefined' : _typeof(input)) !== 'object') {
+    throw new Error('Unexpected input given to normalize. Expected type to be "object", found "' + (typeof input === 'undefined' ? '
+undefined' : _typeof(input)) + '".');
+  }
+
+  var entities = {};
+  var addEntity = addEntities(entities);
+
+  var result = visit(input, input, null, schema, addEntity);
+  return { entities: entities, result: result };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.normalizr.schema" id="apidoc.module.normalizr.schema">module normalizr.schema</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.normalizr.schema.Array" id="apidoc.element.normalizr.schema.Array">
+        function <span class="apidocSignatureSpan">normalizr.schema.</span>Array
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ArraySchema() {
+  _classCallCheck(this, ArraySchema);
+
+  return _possibleConstructorReturn(this, (ArraySchema.__proto__ || Object.getPrototypeOf(ArraySchema)).apply(this, arguments));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.normalizr.schema.Entity" id="apidoc.element.normalizr.schema.Entity">
+        function <span class="apidocSignatureSpan">normalizr.schema.</span>Entity
+        <span class="apidocSignatureSpan">(key)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function EntitySchema(key) {
+  var definition = arguments.length &gt; 1 &amp;&amp; arguments[1] !== undefined ? arguments[1] : {};
+  var options = arguments.length &gt; 2 &amp;&amp; arguments[2] !== undefined ? arguments[2] : {};
+
+  _classCallCheck(this, EntitySchema);
+
+  if (!key || typeof key !== 'string') {
+    throw new Error('Expected a string key for Entity, but found ' + key + '.');
+  }
+
+  var _options$idAttribute = options.idAttribute,
+      idAttribute = _options$idAttribute === undefined ? 'id' : _options$idAttribute,
+      _options$mergeStrateg = options.mergeStrategy,
+      mergeStrategy = _options$mergeStrateg === undefined ? function (entityA, entityB) {
+    return _extends({}, entityA, entityB);
+  } : _options$mergeStrateg,
+      _options$processStrat = options.processStrategy,
+      processStrategy = _options$processStrat === undefined ? function (input) {
+    return _extends({}, input);
+  } : _options$processStrat;
+
+
+  this._key = key;
+  this._getId = typeof idAttribute === 'function' ? idAttribute : getDefaultGetId(idAttribute);
+  this._idAttribute = idAttribute;
+  this._mergeStrategy = mergeStrategy;
+  this._processStrategy = processStrategy;
+  this.define(definition);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+We have two nested entity types within our `article`: `users` and `comments`. Using various `schema`, we can normalize all three
+ entity types down:
+
+```js
+import { normalize, schema } from 'normalizr';
+
+// Define a users schema
+const user = new schema.<span class="apidocCodeKeywordSpan">Entity</span>('users');
+
+// Define your comments schema
+const comment = new schema.Entity('comments', {
+  commenter: user
+});
+
+// Define your article
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.normalizr.schema.Object" id="apidoc.element.normalizr.schema.Object">
+        function <span class="apidocSignatureSpan">normalizr.schema.</span>Object
+        <span class="apidocSignatureSpan">(definition)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ObjectSchema(definition) {
+  _classCallCheck(this, ObjectSchema);
+
+  this.define(definition);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.normalizr.schema.Union" id="apidoc.element.normalizr.schema.Union">
+        function <span class="apidocSignatureSpan">normalizr.schema.</span>Union
+        <span class="apidocSignatureSpan">(definition, schemaAttribute)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function UnionSchema(definition, schemaAttribute) {
+  _classCallCheck(this, UnionSchema);
+
+  if (!schemaAttribute) {
+    throw new Error('Expected option "schemaAttribute" not found on UnionSchema.');
+  }
+  return _possibleConstructorReturn(this, (UnionSchema.__proto__ || Object.getPrototypeOf(UnionSchema)).call(this, definition, schemaAttribute
+));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.normalizr.schema.Values" id="apidoc.element.normalizr.schema.Values">
+        function <span class="apidocSignatureSpan">normalizr.schema.</span>Values
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ValuesSchema() {
+  _classCallCheck(this, ValuesSchema);
+
+  return _possibleConstructorReturn(this, (ValuesSchema.__proto__ || Object.getPrototypeOf(ValuesSchema)).apply(this, arguments));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
