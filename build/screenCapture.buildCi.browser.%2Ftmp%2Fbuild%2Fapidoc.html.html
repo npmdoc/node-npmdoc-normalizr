@@ -1,4 +1,4 @@
-<div class="apidocDiv">
+<html><head></head><body><div class="apidocDiv">
 <style>
 /*csslint
 */
@@ -47,17 +47,10 @@
 }
 </style>
 <h1>api documentation for
-    <a
-
-        href="https://github.com/paularmstrong/normalizr"
-
-    >normalizr (v3.2.2)</a>
+    <a href="https://github.com/paularmstrong/normalizr">normalizr (v3.2.2)</a>
 </h1>
 <h4>Normalizes and denormalizes JSON according to schema for Redux and Flux applications</h4>
-<div class="apidocSectionDiv"><a
-    href="#apidoc.tableOfContents"
-    id="apidoc.tableOfContents"
-><h1>table of contents</h1></a><ol>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
 
     <li class="apidocModuleLi"><a href="#apidoc.module.normalizr">module normalizr</a><ol>
 
@@ -305,9 +298,9 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function normalize(input, schema) {
-  if (!input || (typeof input === &#x27;undefined&#x27; ? &#x27;undefined&#x27; : _typeof(input)) !== &#x27;object&#x27;) {
-    throw new Error(&#x27;Unexpected input given to normalize. Expected type to be &#x22;object&#x22;, found &#x22;&#x27; + (typeof input === &#x27;undefined&#x27; ? &#x27;
-undefined&#x27; : _typeof(input)) + &#x27;&#x22;.&#x27;);
+  if (!input || (typeof input === 'undefined' ? 'undefined' : _typeof(input)) !== 'object') {
+    throw new Error('Unexpected input given to normalize. Expected type to be "object", found "' + (typeof input === 'undefined' ? '
+undefined' : _typeof(input)) + '".');
   }
 
   var entities = {};
@@ -346,17 +339,17 @@ undefined&#x27; : _typeof(input)) + &#x27;&#x22;.&#x27;);
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function EntitySchema(key) {
-  var definition = arguments.length &#x3e; 1 &#x26;&#x26; arguments[1] !== undefined ? arguments[1] : {};
-  var options = arguments.length &#x3e; 2 &#x26;&#x26; arguments[2] !== undefined ? arguments[2] : {};
+  var definition = arguments.length &gt; 1 &amp;&amp; arguments[1] !== undefined ? arguments[1] : {};
+  var options = arguments.length &gt; 2 &amp;&amp; arguments[2] !== undefined ? arguments[2] : {};
 
   _classCallCheck(this, EntitySchema);
 
-  if (!key || typeof key !== &#x27;string&#x27;) {
-    throw new Error(&#x27;Expected a string key for Entity, but found &#x27; + key + &#x27;.&#x27;);
+  if (!key || typeof key !== 'string') {
+    throw new Error('Expected a string key for Entity, but found ' + key + '.');
   }
 
   var _options$idAttribute = options.idAttribute,
-      idAttribute = _options$idAttribute === undefined ? &#x27;id&#x27; : _options$idAttribute,
+      idAttribute = _options$idAttribute === undefined ? 'id' : _options$idAttribute,
       _options$mergeStrateg = options.mergeStrategy,
       mergeStrategy = _options$mergeStrateg === undefined ? function (entityA, entityB) {
     return _extends({}, entityA, entityB);
@@ -368,7 +361,7 @@ undefined&#x27; : _typeof(input)) + &#x27;&#x22;.&#x27;);
 
 
   this._key = key;
-  this._getId = typeof idAttribute === &#x27;function&#x27; ? idAttribute : getDefaultGetId(idAttribute);
+  this._getId = typeof idAttribute === 'function' ? idAttribute : getDefaultGetId(idAttribute);
   this._idAttribute = idAttribute;
   this._mergeStrategy = mergeStrategy;
   this._processStrategy = processStrategy;
@@ -407,7 +400,7 @@ undefined&#x27; : _typeof(input)) + &#x27;&#x22;.&#x27;);
   _classCallCheck(this, UnionSchema);
 
   if (!schemaAttribute) {
-    throw new Error(&#x27;Expected option &#x22;schemaAttribute&#x22; not found on UnionSchema.&#x27;);
+    throw new Error('Expected option "schemaAttribute" not found on UnionSchema.');
   }
   return _possibleConstructorReturn(this, (UnionSchema.__proto__ || Object.getPrototypeOf(UnionSchema)).call(this, definition, schemaAttribute
 ));
@@ -473,9 +466,9 @@ undefined&#x27; : _typeof(input)) + &#x27;&#x22;.&#x27;);
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function normalize(input, schema) {
-  if (!input || (typeof input === &#x27;undefined&#x27; ? &#x27;undefined&#x27; : _typeof(input)) !== &#x27;object&#x27;) {
-    throw new Error(&#x27;Unexpected input given to normalize. Expected type to be &#x22;object&#x22;, found &#x22;&#x27; + (typeof input === &#x27;undefined&#x27; ? &#x27;
-undefined&#x27; : _typeof(input)) + &#x27;&#x22;.&#x27;);
+  if (!input || (typeof input === 'undefined' ? 'undefined' : _typeof(input)) !== 'object') {
+    throw new Error('Unexpected input given to normalize. Expected type to be "object", found "' + (typeof input === 'undefined' ? '
+undefined' : _typeof(input)) + '".');
   }
 
   var entities = {};
@@ -519,17 +512,17 @@ undefined&#x27; : _typeof(input)) + &#x27;&#x22;.&#x27;);
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function EntitySchema(key) {
-  var definition = arguments.length &#x3e; 1 &#x26;&#x26; arguments[1] !== undefined ? arguments[1] : {};
-  var options = arguments.length &#x3e; 2 &#x26;&#x26; arguments[2] !== undefined ? arguments[2] : {};
+  var definition = arguments.length &gt; 1 &amp;&amp; arguments[1] !== undefined ? arguments[1] : {};
+  var options = arguments.length &gt; 2 &amp;&amp; arguments[2] !== undefined ? arguments[2] : {};
 
   _classCallCheck(this, EntitySchema);
 
-  if (!key || typeof key !== &#x27;string&#x27;) {
-    throw new Error(&#x27;Expected a string key for Entity, but found &#x27; + key + &#x27;.&#x27;);
+  if (!key || typeof key !== 'string') {
+    throw new Error('Expected a string key for Entity, but found ' + key + '.');
   }
 
   var _options$idAttribute = options.idAttribute,
-      idAttribute = _options$idAttribute === undefined ? &#x27;id&#x27; : _options$idAttribute,
+      idAttribute = _options$idAttribute === undefined ? 'id' : _options$idAttribute,
       _options$mergeStrateg = options.mergeStrategy,
       mergeStrategy = _options$mergeStrateg === undefined ? function (entityA, entityB) {
     return _extends({}, entityA, entityB);
@@ -541,7 +534,7 @@ undefined&#x27; : _typeof(input)) + &#x27;&#x22;.&#x27;);
 
 
   this._key = key;
-  this._getId = typeof idAttribute === &#x27;function&#x27; ? idAttribute : getDefaultGetId(idAttribute);
+  this._getId = typeof idAttribute === 'function' ? idAttribute : getDefaultGetId(idAttribute);
   this._idAttribute = idAttribute;
   this._mergeStrategy = mergeStrategy;
   this._processStrategy = processStrategy;
@@ -553,13 +546,13 @@ We have two nested entity types within our `article`: `users` and `comments`. Us
  entity types down:
 
 ```js
-import { normalize, schema } from &#x27;normalizr&#x27;;
+import { normalize, schema } from 'normalizr';
 
 // Define a users schema
-const user = new schema.<span class="apidocCodeKeywordSpan">Entity</span>(&#x27;users&#x27;);
+const user = new schema.<span class="apidocCodeKeywordSpan">Entity</span>('users');
 
 // Define your comments schema
-const comment = new schema.Entity(&#x27;comments&#x27;, {
+const comment = new schema.Entity('comments', {
   commenter: user
 });
 
@@ -597,7 +590,7 @@ const comment = new schema.Entity(&#x27;comments&#x27;, {
   _classCallCheck(this, UnionSchema);
 
   if (!schemaAttribute) {
-    throw new Error(&#x27;Expected option &#x22;schemaAttribute&#x22; not found on UnionSchema.&#x27;);
+    throw new Error('Expected option "schemaAttribute" not found on UnionSchema.');
   }
   return _possibleConstructorReturn(this, (UnionSchema.__proto__ || Object.getPrototypeOf(UnionSchema)).call(this, definition, schemaAttribute
 ));
@@ -659,17 +652,17 @@ const comment = new schema.Entity(&#x27;comments&#x27;, {
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function EntitySchema(key) {
-  var definition = arguments.length &#x3e; 1 &#x26;&#x26; arguments[1] !== undefined ? arguments[1] : {};
-  var options = arguments.length &#x3e; 2 &#x26;&#x26; arguments[2] !== undefined ? arguments[2] : {};
+  var definition = arguments.length &gt; 1 &amp;&amp; arguments[1] !== undefined ? arguments[1] : {};
+  var options = arguments.length &gt; 2 &amp;&amp; arguments[2] !== undefined ? arguments[2] : {};
 
   _classCallCheck(this, EntitySchema);
 
-  if (!key || typeof key !== &#x27;string&#x27;) {
-    throw new Error(&#x27;Expected a string key for Entity, but found &#x27; + key + &#x27;.&#x27;);
+  if (!key || typeof key !== 'string') {
+    throw new Error('Expected a string key for Entity, but found ' + key + '.');
   }
 
   var _options$idAttribute = options.idAttribute,
-      idAttribute = _options$idAttribute === undefined ? &#x27;id&#x27; : _options$idAttribute,
+      idAttribute = _options$idAttribute === undefined ? 'id' : _options$idAttribute,
       _options$mergeStrateg = options.mergeStrategy,
       mergeStrategy = _options$mergeStrateg === undefined ? function (entityA, entityB) {
     return _extends({}, entityA, entityB);
@@ -681,7 +674,7 @@ const comment = new schema.Entity(&#x27;comments&#x27;, {
 
 
   this._key = key;
-  this._getId = typeof idAttribute === &#x27;function&#x27; ? idAttribute : getDefaultGetId(idAttribute);
+  this._getId = typeof idAttribute === 'function' ? idAttribute : getDefaultGetId(idAttribute);
   this._idAttribute = idAttribute;
   this._mergeStrategy = mergeStrategy;
   this._processStrategy = processStrategy;
@@ -693,13 +686,13 @@ We have two nested entity types within our `article`: `users` and `comments`. Us
  entity types down:
 
 ```js
-import { normalize, schema } from &#x27;normalizr&#x27;;
+import { normalize, schema } from 'normalizr';
 
 // Define a users schema
-const user = new schema.<span class="apidocCodeKeywordSpan">Entity</span>(&#x27;users&#x27;);
+const user = new schema.<span class="apidocCodeKeywordSpan">Entity</span>('users');
 
 // Define your comments schema
-const comment = new schema.Entity(&#x27;comments&#x27;, {
+const comment = new schema.Entity('comments', {
   commenter: user
 });
 
@@ -747,7 +740,7 @@ const comment = new schema.Entity(&#x27;comments&#x27;, {
   _classCallCheck(this, UnionSchema);
 
   if (!schemaAttribute) {
-    throw new Error(&#x27;Expected option &#x22;schemaAttribute&#x22; not found on UnionSchema.&#x27;);
+    throw new Error('Expected option "schemaAttribute" not found on UnionSchema.');
   }
   return _possibleConstructorReturn(this, (UnionSchema.__proto__ || Object.getPrototypeOf(UnionSchema)).call(this, definition, schemaAttribute
 ));
@@ -786,3 +779,4 @@ const comment = new schema.Entity(&#x27;comments&#x27;, {
     ]
 </div>
 </div>
+</body></html>
