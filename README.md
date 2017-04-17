@@ -1,9 +1,11 @@
 # api documentation for  [normalizr (v3.2.2)](https://github.com/paularmstrong/normalizr)  [![npm package](https://img.shields.io/npm/v/npmdoc-normalizr.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-normalizr) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-normalizr.svg)](https://travis-ci.org/npmdoc/node-npmdoc-normalizr)
 #### Normalizes and denormalizes JSON according to schema for Redux and Flux applications
 
-[![NPM](https://nodei.co/npm/normalizr.png?downloads=true)](https://www.npmjs.com/package/normalizr)
+[![NPM](https://nodei.co/npm/normalizr.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/normalizr)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-normalizr/build/screenCapture.buildNpmdoc.browser._2Fhome_2Ftravis_2Fbuild_2Fnpmdoc_2Fnode-npmdoc-normalizr_2Ftmp_2Fbuild_2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-normalizr/build/apidoc.html)
+- [https://npmdoc.github.io/node-npmdoc-normalizr/build/apidoc.html](https://npmdoc.github.io/node-npmdoc-normalizr/build/apidoc.html)
+
+[![apidoc](https://npmdoc.github.io/node-npmdoc-normalizr/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-normalizr/build/apidoc.html)
 
 ![npmPackageListing](https://npmdoc.github.io/node-npmdoc-normalizr/build/screenCapture.npmPackageListing.svg)
 
@@ -75,13 +77,11 @@
     "main": "dist/src/index.js",
     "maintainers": [
         {
-            "name": "paularmstrong",
-            "email": "paul@spaceyak.com"
+            "name": "paularmstrong"
         }
     ],
     "name": "normalizr",
     "optionalDependencies": {},
-    "readme": "ERROR: No README data found!",
     "repository": {
         "url": "git+https://github.com/paularmstrong/normalizr.git",
         "type": "git"
@@ -102,182 +102,6 @@
     "typings": "index.d.ts",
     "version": "3.2.2"
 }
-```
-
-
-
-# <a name="apidoc.tableOfContents"></a>[table of contents](#apidoc.tableOfContents)
-
-#### [module normalizr](#apidoc.module.normalizr)
-1.  [function <span class="apidocSignatureSpan">normalizr.</span>denormalize (input, schema, entities)](#apidoc.element.normalizr.denormalize)
-1.  [function <span class="apidocSignatureSpan">normalizr.</span>normalize (input, schema)](#apidoc.element.normalizr.normalize)
-1.  object <span class="apidocSignatureSpan">normalizr.</span>schema
-
-#### [module normalizr.schema](#apidoc.module.normalizr.schema)
-1.  [function <span class="apidocSignatureSpan">normalizr.schema.</span>Array ()](#apidoc.element.normalizr.schema.Array)
-1.  [function <span class="apidocSignatureSpan">normalizr.schema.</span>Entity (key)](#apidoc.element.normalizr.schema.Entity)
-1.  [function <span class="apidocSignatureSpan">normalizr.schema.</span>Object (definition)](#apidoc.element.normalizr.schema.Object)
-1.  [function <span class="apidocSignatureSpan">normalizr.schema.</span>Union (definition, schemaAttribute)](#apidoc.element.normalizr.schema.Union)
-1.  [function <span class="apidocSignatureSpan">normalizr.schema.</span>Values ()](#apidoc.element.normalizr.schema.Values)
-
-
-
-# <a name="apidoc.module.normalizr"></a>[module normalizr](#apidoc.module.normalizr)
-
-#### <a name="apidoc.element.normalizr.denormalize"></a>[function <span class="apidocSignatureSpan">normalizr.</span>denormalize (input, schema, entities)](#apidoc.element.normalizr.denormalize)
-- description and source-code
-```javascript
-function denormalize(input, schema, entities) {
-  if (!input) {
-    return input;
-  }
-
-  return getUnvisit(entities)(input, schema);
-}
-```
-- example usage
-```shell
-n/a
-```
-
-#### <a name="apidoc.element.normalizr.normalize"></a>[function <span class="apidocSignatureSpan">normalizr.</span>normalize (input, schema)](#apidoc.element.normalizr.normalize)
-- description and source-code
-```javascript
-function normalize(input, schema) {
-  if (!input || (typeof input === 'undefined' ? 'undefined' : _typeof(input)) !== 'object') {
-    throw new Error('Unexpected input given to normalize. Expected type to be "object", found "' + (typeof input === 'undefined' ? '
-undefined' : _typeof(input)) + '".');
-  }
-
-  var entities = {};
-  var addEntity = addEntities(entities);
-
-  var result = visit(input, input, null, schema, addEntity);
-  return { entities: entities, result: result };
-}
-```
-- example usage
-```shell
-n/a
-```
-
-
-
-# <a name="apidoc.module.normalizr.schema"></a>[module normalizr.schema](#apidoc.module.normalizr.schema)
-
-#### <a name="apidoc.element.normalizr.schema.Array"></a>[function <span class="apidocSignatureSpan">normalizr.schema.</span>Array ()](#apidoc.element.normalizr.schema.Array)
-- description and source-code
-```javascript
-function ArraySchema() {
-  _classCallCheck(this, ArraySchema);
-
-  return _possibleConstructorReturn(this, (ArraySchema.__proto__ || Object.getPrototypeOf(ArraySchema)).apply(this, arguments));
-}
-```
-- example usage
-```shell
-n/a
-```
-
-#### <a name="apidoc.element.normalizr.schema.Entity"></a>[function <span class="apidocSignatureSpan">normalizr.schema.</span>Entity (key)](#apidoc.element.normalizr.schema.Entity)
-- description and source-code
-```javascript
-function EntitySchema(key) {
-  var definition = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
-  var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
-
-  _classCallCheck(this, EntitySchema);
-
-  if (!key || typeof key !== 'string') {
-    throw new Error('Expected a string key for Entity, but found ' + key + '.');
-  }
-
-  var _options$idAttribute = options.idAttribute,
-      idAttribute = _options$idAttribute === undefined ? 'id' : _options$idAttribute,
-      _options$mergeStrateg = options.mergeStrategy,
-      mergeStrategy = _options$mergeStrateg === undefined ? function (entityA, entityB) {
-    return _extends({}, entityA, entityB);
-  } : _options$mergeStrateg,
-      _options$processStrat = options.processStrategy,
-      processStrategy = _options$processStrat === undefined ? function (input) {
-    return _extends({}, input);
-  } : _options$processStrat;
-
-
-  this._key = key;
-  this._getId = typeof idAttribute === 'function' ? idAttribute : getDefaultGetId(idAttribute);
-  this._idAttribute = idAttribute;
-  this._mergeStrategy = mergeStrategy;
-  this._processStrategy = processStrategy;
-  this.define(definition);
-}
-```
-- example usage
-```shell
-...
-
-We have two nested entity types within our 'article': 'users' and 'comments'. Using various 'schema', we can normalize all three
- entity types down:
-
-'''js
-import { normalize, schema } from 'normalizr';
-
-// Define a users schema
-const user = new schema.Entity('users');
-
-// Define your comments schema
-const comment = new schema.Entity('comments', {
-  commenter: user
-});
-
-// Define your article
-...
-```
-
-#### <a name="apidoc.element.normalizr.schema.Object"></a>[function <span class="apidocSignatureSpan">normalizr.schema.</span>Object (definition)](#apidoc.element.normalizr.schema.Object)
-- description and source-code
-```javascript
-function ObjectSchema(definition) {
-  _classCallCheck(this, ObjectSchema);
-
-  this.define(definition);
-}
-```
-- example usage
-```shell
-n/a
-```
-
-#### <a name="apidoc.element.normalizr.schema.Union"></a>[function <span class="apidocSignatureSpan">normalizr.schema.</span>Union (definition, schemaAttribute)](#apidoc.element.normalizr.schema.Union)
-- description and source-code
-```javascript
-function UnionSchema(definition, schemaAttribute) {
-  _classCallCheck(this, UnionSchema);
-
-  if (!schemaAttribute) {
-    throw new Error('Expected option "schemaAttribute" not found on UnionSchema.');
-  }
-  return _possibleConstructorReturn(this, (UnionSchema.__proto__ || Object.getPrototypeOf(UnionSchema)).call(this, definition, schemaAttribute
-));
-}
-```
-- example usage
-```shell
-n/a
-```
-
-#### <a name="apidoc.element.normalizr.schema.Values"></a>[function <span class="apidocSignatureSpan">normalizr.schema.</span>Values ()](#apidoc.element.normalizr.schema.Values)
-- description and source-code
-```javascript
-function ValuesSchema() {
-  _classCallCheck(this, ValuesSchema);
-
-  return _possibleConstructorReturn(this, (ValuesSchema.__proto__ || Object.getPrototypeOf(ValuesSchema)).apply(this, arguments));
-}
-```
-- example usage
-```shell
-n/a
 ```
 
 
