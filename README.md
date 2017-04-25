@@ -1,4 +1,7 @@
-# api documentation for  [normalizr (v3.2.2)](https://github.com/paularmstrong/normalizr)  [![npm package](https://img.shields.io/npm/v/npmdoc-normalizr.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-normalizr) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-normalizr.svg)](https://travis-ci.org/npmdoc/node-npmdoc-normalizr)
+# npmdoc-normalizr
+
+#### basic api documentation for  [normalizr (v3.2.2)](https://github.com/paularmstrong/normalizr)  [![npm package](https://img.shields.io/npm/v/npmdoc-normalizr.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-normalizr) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-normalizr.svg)](https://travis-ci.org/npmdoc/node-npmdoc-normalizr)
+
 #### Normalizes and denormalizes JSON according to schema for Redux and Flux applications
 
 [![NPM](https://nodei.co/npm/normalizr.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/normalizr)
@@ -100,7 +103,8 @@
         "test:coverage": "npm run test -- --coverage && cat ./coverage/lcov.info | coveralls"
     },
     "typings": "index.d.ts",
-    "version": "3.2.2"
+    "version": "3.2.2",
+    "bin": {}
 }
 ```
 
